@@ -15,12 +15,19 @@
     "format": "prettier --write --experimental-cli src/"
   },
   "dependencies": {
+    "@fontsource/inter": "^5.2.8",
+    "@fontsource/poppins": "^5.2.7",
+    "@tailwindcss/vite": "^4.3.0",
+    "@vueuse/motion": "^3.0.3",
+    "lucide-vue-next": "^1.0.0",
+    "swiper": "^12.1.4",
+    "tailwindcss": "^4.3.0",
     "vue": "^3.5.32",
     "vue-router": "^5.0.4"
   },
   "devDependencies": {
     "@tsconfig/node24": "^24.0.4",
-    "@types/node": "^24.12.2",
+    "@types/node": "^24.12.4",
     "@vitejs/plugin-vue": "^6.0.6",
     "@vue/eslint-config-typescript": "^14.7.0",
     "@vue/tsconfig": "^0.9.1",
