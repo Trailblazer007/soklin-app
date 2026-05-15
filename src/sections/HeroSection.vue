@@ -135,6 +135,11 @@ import soklinConc from "@/assets/images/products/soklin-upgrade.jpg";
     width: min(100%, 420px);
     object-fit: contain;
     animation: float 4s ease-in-out infinite;
+    transition: transform 0.5s ease;
+}
+
+.hero-product:hover {
+    transform: scale(1.03);
 }
 
 @keyframes float {

@@ -11,6 +11,11 @@
                     A conceptual/speculative redesign project exploring a
                     modern digital experience for SoKlin.
                 </p>
+
+                <p class="footer-disclaimer">
+                    This is an independent conceptual frontend project
+                    created for portfolio and educational purposes.
+                </p>
             </div>
 
             <div class="footer-links">
@@ -50,6 +55,12 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+.footer-disclaimer {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--color-text-light);
 }
 
 @media (max-width: 768px) {

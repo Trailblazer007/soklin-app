@@ -9,7 +9,9 @@ defineProps<{
 
 <template>
     <div class="product-card">
-        <img :src="image" :alt="name" class="product-image" />
+        <div class="image-wrapper">
+            <img :src="image" :alt="name" class="product-image" loading="lazy" />
+        </div>
 
         <div class="product-content">
             <h3>{{ name }}</h3>
@@ -26,6 +28,11 @@ defineProps<{
 </template>
 
 <style scoped>
+.image-wrapper {
+    overflow: hidden;
+    background: var(--color-surface);
+}
+
 .product-card {
     overflow: hidden;
     border-radius: var(--radius-lg);

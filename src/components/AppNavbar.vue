@@ -30,11 +30,11 @@ onUnmounted(() => {
             </RouterLink>
 
             <nav class="nav-links">
-                <RouterLink to="/">Home</RouterLink>
-                <RouterLink to="/products">Products</RouterLink>
-                <RouterLink to="/campaigns">Campaigns</RouterLink>
-                <RouterLink to="/about">About</RouterLink>
-                <RouterLink to="/contact">Contact</RouterLink>
+                <RouterLink to="/" active-class="active-link">Home</RouterLink>
+                <RouterLink to="/products" active-class="active-link">Products</RouterLink>
+                <RouterLink to="/campaigns" active-class="active-link">Campaigns</RouterLink>
+                <RouterLink to="/about" active-class="active-link">About</RouterLink>
+                <RouterLink to="/contact" active-class="active-link">Contact</RouterLink>
             </nav>
 
             <button class="mobile-menu-button" @click="isMobileMenuOpen = !isMobileMenuOpen">
@@ -95,6 +95,14 @@ onUnmounted(() => {
     font-family: "Poppins", sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
+}
+
+.active-link {
+    color: var(--color-secondary);
+}
+
+.active-link::after {
+    width: 100% !important;
 }
 
 .nav-links {
