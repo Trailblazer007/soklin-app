@@ -137,14 +137,16 @@ watch(
     position: sticky;
     top: 0;
     z-index: 1000;
-    transition: var(--transition-default);
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(14px);
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    transition: all 0.35s ease;
 }
 
 .navbar-scrolled {
+    background: rgba(255, 255, 255, 0.85);
     border-bottom: 1px solid var(--color-border);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
 }
 
 .navbar-container {
@@ -162,6 +164,7 @@ watch(
 
 .active-link {
     color: var(--color-secondary);
+    font-weight: 600;
 }
 
 .active-link::after {
@@ -184,9 +187,13 @@ watch(
     left: 0;
     bottom: -6px;
     width: 0%;
-    height: 2px;
+    height: 3px;
     background: var(--color-secondary);
     transition: var(--transition-default);
+}
+
+.nav-links a:hover {
+    color: var(--color-secondary);
 }
 
 .nav-links a:hover::after {
@@ -205,21 +212,30 @@ watch(
     padding: 1.5rem 2rem 2rem;
     background: white;
     border-bottom: 1px solid var(--color-border);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .mobile-menu a {
     font-weight: 600;
 }
 
-.mobile-menu-enter-active,
-.mobile-menu-leave-active {
-    transition: all 0.3s ease;
+.mobile-menu a:hover {
+    color: var(--color-secondary);
 }
 
-.mobile-menu-enter-from,
-.mobile-menu-leave-to {
+.mobile-menu-enter-active,
+.mobile-menu-leave-active {
+    transition: transform 0.35s ease, opacity 0.25s ease;
+}
+
+.mobile-menu-enter-from {
+    transform: translateY(-12px);
     opacity: 0;
-    transform: translateY(-10px);
+}
+
+.mobile-menu-leave-to {
+    transform: translateY(-12px);
+    opacity: 0;
 }
 
 @media (max-width: 968px) {
