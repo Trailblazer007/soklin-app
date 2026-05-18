@@ -1,21 +1,55 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from "vue";
-import { RouterLink } from "vue-router";
+import {
+    ref,
+    onMounted,
+    onUnmounted,
+} from "vue"; import { RouterLink } from "vue-router";
 import { Menu, X } from "lucide-vue-next";
 
 const isScrolled = ref(false);
 const isMobileMenuOpen = ref(false);
 
+const mobileMenuRef = ref<HTMLElement | null>(
+    null
+);
+
 const handleScroll = () => {
     isScrolled.value = window.scrollY > 20;
 };
 
+const handleOutsideClick = (
+    event: MouseEvent
+) => {
+    const target = event.target as Node;
+
+    if (
+        isMobileMenuOpen.value &&
+        mobileMenuRef.value &&
+        !mobileMenuRef.value.contains(target)
+    ) {
+        isMobileMenuOpen.value = false;
+    }
+};
+
 onMounted(() => {
     window.addEventListener("scroll", handleScroll);
+
+    document.addEventListener(
+        "click",
+        handleOutsideClick
+    );
 });
 
 onUnmounted(() => {
-    window.removeEventListener("scroll", handleScroll);
+    window.removeEventListener(
+        "scroll",
+        handleScroll
+    );
+
+    document.removeEventListener(
+        "click",
+        handleOutsideClick
+    );
 });
 </script>
 
@@ -37,14 +71,14 @@ onUnmounted(() => {
                 <RouterLink to="/contact" active-class="active-link">Contact</RouterLink>
             </nav>
 
-            <button class="mobile-menu-button" @click="isMobileMenuOpen = !isMobileMenuOpen">
+            <button class="mobile-menu-button" @click.stop="isMobileMenuOpen = !isMobileMenuOpen">
                 <Menu v-if="!isMobileMenuOpen" :size="28" />
                 <X v-else :size="28" />
             </button>
         </div>
 
         <transition name="mobile-menu">
-            <div v-if="isMobileMenuOpen" class="mobile-menu">
+            <div v-if="isMobileMenuOpen" ref="mobileMenuRef" class="mobile-menu">
                 <RouterLink to="/" @click="isMobileMenuOpen = false">
                     Home
                 </RouterLink>
