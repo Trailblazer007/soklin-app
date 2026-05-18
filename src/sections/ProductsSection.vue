@@ -16,9 +16,7 @@ import { products } from "@/data/products";
             </p>
 
             <div class="products-grid">
-                <ProductCard v-for="product in products" :key="product.id" :name="product.name"
-                    :description="product.description" :image="product.image" :benefits="product.benefits"
-                    :category="product.category" :sizes="product.sizes" />
+                <ProductCard v-for="product in products" :key="product.id" :product="product" />
             </div>
         </div>
     </section>

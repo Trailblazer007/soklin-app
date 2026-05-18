@@ -2,6 +2,7 @@
 
 <template>
   <RouterView />
+  <ProductModal />
 </template>
 
 <style scoped></style>

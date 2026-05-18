@@ -1,35 +1,37 @@
 <script setup lang="ts">
-defineProps<{
-    name: string;
-    description: string;
-    image: string;
-    benefits: string[];
-    category: string;
-    sizes: string[];
+import type { Product } from "@/types/product";
+import { useProductModal } from "@/stores/productModal";
+
+const { openModal } = useProductModal();
+
+
+const props = defineProps<{
+    product: Product
 }>();
+
 </script>
 
 <template>
-    <div class="product-card">
+    <div class="product-card" @click="openModal(props.product)">
         <div class="image-wrapper">
-            <img :src="image" :alt="name" class="product-image" loading="lazy" />
+            <img :src="product.image" :alt="product.name" class="product-image" loading="lazy" />
         </div>
 
         <div class="product-content">
-            <h3>{{ name }}</h3>
+            <h3>{{ product.name }}</h3>
             <span class="product-category">
-                {{ category }}
+                {{ product.category }}
             </span>
 
-            <p>{{ description }}</p>
+            <p>{{ product.description }}</p>
             <div class="sizes-wrapper">
-                <span v-for="size in sizes" :key="size" class="size-pill">
+                <span v-for="size in product.sizes" :key="size" class="size-pill">
                     {{ size }}
                 </span>
             </div>
 
             <div class="product-benefits">
-                <span v-for="benefit in benefits" :key="benefit">
+                <span v-for="benefit in product.benefits" :key="benefit">
                     {{ benefit }}
                 </span>
             </div>

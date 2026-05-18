@@ -60,8 +60,7 @@ const onSwiperInit = (swiper: SwiperType) => {
                     1024: { slidesPerView: 3 }
                 }" @swiper="onSwiperInit" class="product-swiper">
                 <SwiperSlide v-for="product in products" :key="product.id">
-                    <ProductCard :name="product.name" :description="product.description" :image="product.image"
-                        :benefits="product.benefits" :category="product.category" :sizes="product.sizes" />
+                    <ProductCard :product="product" />
                 </SwiperSlide>
             </Swiper>
         </div>
