@@ -4,15 +4,14 @@ import { useProductModal } from "@/stores/productModal";
 
 const { openModal } = useProductModal();
 
-
-const props = defineProps<{
-    product: Product
+const { product } = defineProps<{
+    product: Product;
 }>();
 
 </script>
 
 <template>
-    <div class="product-card" @click="openModal(props.product)">
+    <div class="product-card" @click="openModal(product)">
         <div class="image-wrapper">
             <img :src="product.image" :alt="product.name" class="product-image" loading="lazy" />
         </div>
