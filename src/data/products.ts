@@ -15,6 +15,8 @@ export const products = [
       "Nigeria's flagship detergent since 1996. The first sachet powder in the market — 30% concentrated formula for a faster, brighter, cleaner wash.",
     image: soklinOriginal,
     benefits: ["Stain Magnet Technology", "Colour Guard", "30% Concentrated", "Hand & Machine Safe"],
+    category: "Powder Detergent",
+    sizes:["15g", "22g", "25g", "30g", "65g", "90g", "190g", "200g", "330g", "500g", "850g", "1kg"]
   },
   {
     id: 2,
@@ -23,6 +25,8 @@ export const products = [
       "A new powder detergent variant crafted for gentle yet effective hand washing, with fragrance and colour protection.",
     image: soklinPink,
     benefits: ["Stain Removal", "Fragrance", "Colour Protection"],
+    category: "Powder Detergent",
+    sizes:["1kg"]
   },
   {
     id: 3,
@@ -31,6 +35,8 @@ export const products = [
       "Formulated for Nigerian urban living — no sun needed. Fights damp smells, sweat odour, and long-soak odours with 2X freshness that lasts.",
     image: soklinUltraOdourDefence,
     benefits: ["Odour Guard Technology", "2X Freshness", "No Damp Smell", "Indoor Drying Safe"],
+    category: "Powder Detergent",
+    sizes:["25g", "50g", "160g", "400g", "800g",]
   },
   {
     id: 4,
@@ -39,6 +45,8 @@ export const products = [
       "Nigeria's first mass-market machine detergent from SoKlin. Extra concentrated with Clean 8 Technology — engineered for both top and front load washing machines.",
     image: soklinMatic,
     benefits: ["Clean 8 Technology", "Machine Optimised", "Low-Foam Formula", "Deep Stain Removal"],
+    category: "Machine Detergent",
+    sizes:["1kg", "2kg"]
   },
   {
     id: 5,
@@ -47,6 +55,8 @@ export const products = [
       "One of Nigeria's first locally produced liquid detergents. Dissolves fast, foams faster, and delivers 2X cleaning power for hands and machines.",
     image: soklinSmartLiquidUltimateClean,
     benefits: ["Smart Ion Technology", "2X Cleaner", "Antibacterial", "Soft on Hands"],
+    category: "Liquid Detergent",
+    sizes:["33ml"]
   },
   {
     id: 6,
@@ -55,6 +65,8 @@ export const products = [
       "The fragrance-first liquid detergent. Long-lasting scent that stays on your clothes well after the wash — gentle on hands, tough on stains.",
     image: soklinSmartLiquidIntensePerfume,
     benefits: ["Long-Lasting Fragrance", "Smart Ion Technology", "Antibacterial", "Hand & Machine Safe"],
+    category: "Liquid Detergent",
+    sizes:["33ml"]
   },
   {
     id: 7,
@@ -63,6 +75,8 @@ export const products = [
       "A concentrated bottled liquid detergent for soft, bright results. 50% more concentrated with 2X stain removal and fabric softening in every wash.",
     image: soklinLiquidDetergentBottles,
     benefits: ["50% More Concentrated", "2X Fabric Softening", "Anti-Bacterial", "Aromatic Scent"],
+    category: "Liquid Detergent",
+    sizes:["800ml", "1l" ]
   },
   {
     id: 8,
@@ -71,5 +85,7 @@ export const products = [
       "Beyond clean — antiseptic protection built into every wash. Guards your family against germs while delivering a deep, bright clean.",
     image: soklin2XProtect,
     benefits: ["2X Germ Protection", "Antiseptic Technology", "Deep Clean", "Brighter Wash"],
+    category: "Antibacterial Detergent",
+    sizes:["400g"]
   },
 ];

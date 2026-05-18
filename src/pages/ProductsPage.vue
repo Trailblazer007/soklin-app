@@ -48,7 +48,8 @@ const filteredProducts = computed(() => {
 
                 <div v-if="filteredProducts.length" class="products-grid">
                     <ProductCard v-for="product in filteredProducts" :key="product.id" :name="product.name"
-                        :description="product.description" :image="product.image" :benefits="product.benefits" />
+                        :description="product.description" :image="product.image" :benefits="product.benefits"
+                        :category="product.category" :sizes="product.sizes" />
                 </div>
 
                 <div v-else class="empty-state">

@@ -4,6 +4,8 @@ defineProps<{
     description: string;
     image: string;
     benefits: string[];
+    category: string;
+    sizes: string[];
 }>();
 </script>
 
@@ -15,8 +17,16 @@ defineProps<{
 
         <div class="product-content">
             <h3>{{ name }}</h3>
+            <span class="product-category">
+                {{ category }}
+            </span>
 
             <p>{{ description }}</p>
+            <div class="sizes-wrapper">
+                <span v-for="size in sizes" :key="size" class="size-pill">
+                    {{ size }}
+                </span>
+            </div>
 
             <div class="product-benefits">
                 <span v-for="benefit in benefits" :key="benefit">
@@ -31,6 +41,29 @@ defineProps<{
 .image-wrapper {
     overflow: hidden;
     background: var(--color-surface);
+}
+
+.product-category {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: var(--color-secondary);
+    font-weight: 600;
+}
+
+.sizes-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: 1.5rem;
+}
+
+.size-pill {
+    padding: 0.5rem 0.9rem;
+    border-radius: 999px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
 .product-card {
