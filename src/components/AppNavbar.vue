@@ -5,6 +5,8 @@ import {
     onUnmounted,
 } from "vue"; import { RouterLink } from "vue-router";
 import { Menu, X } from "lucide-vue-next";
+import { useRoute } from "vue-router";
+import { watch } from "vue";
 
 const isScrolled = ref(false);
 const isMobileMenuOpen = ref(false);
@@ -51,6 +53,15 @@ onUnmounted(() => {
         handleOutsideClick
     );
 });
+
+const route = useRoute();
+
+watch(
+    () => route.path,
+    () => {
+        isMobileMenuOpen.value = false;
+    }
+);
 </script>
 
 <template>
@@ -60,7 +71,7 @@ onUnmounted(() => {
     ]">
         <div class="container navbar-container">
             <RouterLink to="/" class="logo">
-                SoKlin
+                <img src="/so-klin-logo.png" alt="SoKlin" class="logo-image" />
             </RouterLink>
 
             <nav class="nav-links">
@@ -104,6 +115,24 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
+.logo-image {
+    height: 72px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    transition: var(--transition-default);
+}
+
+.logo:hover {
+    opacity: 0.8;
+    transform: scale(1.02);
+}
+
 .navbar {
     position: sticky;
     top: 0;
