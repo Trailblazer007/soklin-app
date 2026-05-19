@@ -28,9 +28,9 @@ import soklinConc from "@/assets/images/products/soklin-upgrade.jpg";
                 </p>
 
                 <div class="hero-actions">
-                    <BaseButton label="Explore Products" />
+                    <BaseButton label="Explore Products" to="/products" />
 
-                    <BaseButton label="View Campaigns" variant="secondary" />
+                    <BaseButton label="View Campaigns" to="/campaigns" variant="secondary" />
                 </div>
             </div>
 

@@ -1,12 +1,23 @@
 <script setup lang="ts">
+import { RouterLink } from "vue-router";
 defineProps<{
     label: string;
     variant?: "primary" | "secondary";
+    to?: string;
 }>();
 </script>
 
 <template>
-    <button :class="[
+    <RouterLink v-if="to" :to="to" :class="[
+        'base-button',
+        variant === 'secondary'
+            ? 'base-button-secondary'
+            : 'base-button-primary',
+    ]">
+        {{ label }}
+    </RouterLink>
+
+    <button v-else :class="[
         'base-button',
         variant === 'secondary'
             ? 'base-button-secondary'
