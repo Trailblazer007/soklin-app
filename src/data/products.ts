@@ -12,7 +12,7 @@ export const products = [
     id: 1,
     name: "SoKlin Original Concentrated Powder",
     description:
-      "Nigeria's flagship detergent since 1996. The first sachet powder in the market — 30% concentrated formula for a faster, brighter, cleaner wash.",
+      "Nigeria's flagship detergent since 1996. The first sachet powder in the market - 30% concentrated formula for a faster, brighter, cleaner wash.",
     image: soklinOriginal,
     benefits: ["Stain Magnet Technology", "Colour Guard", "30% Concentrated", "Hand & Machine Safe"],
     category: "Powder Detergent",
@@ -32,7 +32,7 @@ export const products = [
     id: 3,
     name: "SoKlin Ultra Odour Defence",
     description:
-      "Formulated for Nigerian urban living — no sun needed. Fights damp smells, sweat odour, and long-soak odours with 2X freshness that lasts.",
+      "Formulated for Nigerian urban living - no sun needed. Fights damp smells, sweat odour, and long-soak odours with 2X freshness that lasts.",
     image: soklinUltraOdourDefence,
     benefits: ["Odour Guard Technology", "2X Freshness", "No Damp Smell", "Indoor Drying Safe"],
     category: "Powder Detergent",
@@ -42,7 +42,7 @@ export const products = [
     id: 4,
     name: "SoKlin Matic",
     description:
-      "Nigeria's first mass-market machine detergent from SoKlin. Extra concentrated with Clean 8 Technology — engineered for both top and front load washing machines.",
+      "Nigeria's first mass-market machine detergent from SoKlin. Extra concentrated with Clean 8 Technology - engineered for both top and front load washing machines.",
     image: soklinMatic,
     benefits: ["Clean 8 Technology", "Machine Optimised", "Low-Foam Formula", "Deep Stain Removal"],
     category: "Machine Detergent",
@@ -62,7 +62,7 @@ export const products = [
     id: 6,
     name: "SoKlin Smart Liquid - Intense Perfume",
     description:
-      "The fragrance-first liquid detergent. Long-lasting scent that stays on your clothes well after the wash — gentle on hands, tough on stains.",
+      "The fragrance-first liquid detergent. Long-lasting scent that stays on your clothes well after the wash - gentle on hands, tough on stains.",
     image: soklinSmartLiquidIntensePerfume,
     benefits: ["Long-Lasting Fragrance", "Smart Ion Technology", "Antibacterial", "Hand & Machine Safe"],
     category: "Liquid Detergent",
@@ -70,7 +70,7 @@ export const products = [
   },
   {
     id: 7,
-    name: "SoKlin Liquid Detergent — Bottles",
+    name: "SoKlin Liquid Detergent - Bottles",
     description:
       "A concentrated bottled liquid detergent for soft, bright results. 50% more concentrated with 2X stain removal and fabric softening in every wash.",
     image: soklinLiquidDetergentBottles,
@@ -82,7 +82,7 @@ export const products = [
     id: 8,
     name: "SoKlin 2X Protect",
     description:
-      "Beyond clean — antiseptic protection built into every wash. Guards your family against germs while delivering a deep, bright clean.",
+      "Beyond clean - antiseptic protection built into every wash. Guards your family against germs while delivering a deep, bright clean.",
     image: soklin2XProtect,
     benefits: ["2X Germ Protection", "Antiseptic Technology", "Deep Clean", "Brighter Wash"],
     category: "Antibacterial Detergent",

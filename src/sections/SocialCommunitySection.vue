@@ -46,6 +46,12 @@
 </template>
 
 <style scoped>
+.section-subtitle {
+    white-space: nowrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .social-section {
     background: var(--color-surface);
 }

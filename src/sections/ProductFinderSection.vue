@@ -30,6 +30,11 @@ const categories = [
 </template>
 
 <style scoped>
+.section-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .finder-section {
     background: var(--color-surface);
 }

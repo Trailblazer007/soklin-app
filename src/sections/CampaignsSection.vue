@@ -32,6 +32,10 @@ import { campaigns } from "@/data/campaigns";
 </template>
 
 <style scoped>
+.section-subtitle {
+    white-space: nowrap;
+}
+
 .campaigns-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

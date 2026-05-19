@@ -1,4 +1,10 @@
 <script setup lang="ts">
+import {
+    Facebook,
+    Instagram,
+    Youtube,
+    Github,
+} from "lucide-vue-next";
 </script>
 
 <template>
@@ -8,34 +14,36 @@
                 <img src="/so-klin-logo.png" alt="SoKlin Logo" class="footer-logo" />
 
                 <p class="footer-description">
-                    A conceptual/speculative redesign project exploring a
-                    modern digital experience for SoKlin.
+                    A conceptual frontend redesign exploring a modern,
+                    community-driven digital experience for SoKlin.
                 </p>
 
                 <p class="footer-disclaimer">
-                    This independent frontend project was created for
-                    portfolio and educational purposes.
+                    Independent portfolio project created for educational
+                    and showcase purposes.
                 </p>
             </div>
 
-            <div class="footer-links">
-                <h4>Socials</h4>
+            <div class="footer-socials">
+                <h4>Connect With SoKlin</h4>
 
-                <div class="social-links">
-                    <a href="https://facebook.com/SoKlinNigeria" target="_blank">
-                        Facebook
+                <div class="social-icons">
+                    <a href="https://facebook.com/SoKlinNigeria" target="_blank" aria-label="Facebook" class="facebook">
+                        <Facebook :size="22" />
                     </a>
 
-                    <a href="https://www.instagram.com/soklin.nigeria" target="_blank">
-                        Instagram
+                    <a href="https://www.instagram.com/soklin.nigeria" target="_blank" aria-label="Instagram"
+                        class="instagram">
+                        <Instagram :size="22" />
                     </a>
 
-                    <a href="https://www.tiktok.com/@soklinnigeria" target="_blank">
-                        TikTok
+                    <a href="https://www.tiktok.com/@soklinnigeria" target="_blank" aria-label="TikTok" class="tiktok">
+                        ♪
                     </a>
 
-                    <a href="https://www.youtube.com/@soklinnigeria" target="_blank">
-                        YouTube
+                    <a href="https://www.youtube.com/@soklinnigeria" target="_blank" aria-label="YouTube"
+                        class="youtube">
+                        <Youtube :size="22" />
                     </a>
                 </div>
             </div>
@@ -47,9 +55,13 @@
                     © 2026 SoKlin Concept Experience
                 </p>
 
-                <p>
-                    Built by Oluwaseun Fatoye
-                </p>
+                <a href="https://github.com/trailblazer007" target="_blank" class="creator-link">
+                    <Github :size="16" />
+
+                    <span>
+                        Built by Oluwaseun Fatoye
+                    </span>
+                </a>
             </div>
         </div>
     </footer>
@@ -57,51 +69,22 @@
 
 <style scoped>
 .footer {
-    padding: 4rem 0;
-    background: var(--color-surface);
-    margin-top: 6rem;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 3rem;
-}
-
-.footer h3 {
-    font-family: "Poppins", sans-serif;
-    margin-bottom: 1rem;
-}
-
-.footer p {
-    max-width: 500px;
-    line-height: 1.7;
-    color: var(--color-text-light);
-}
-
-.footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.footer-disclaimer {
-    margin-top: 1rem;
-    font-size: 0.9rem;
-    color: var(--color-text-light);
-}
-
-.footer {
     margin-top: 6rem;
     background: #ffffff;
     border-top: 1px solid var(--color-border);
 }
 
 .footer-container {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     gap: 4rem;
+
     padding: 5rem 0;
+}
+
+.footer-brand {
+    max-width: 560px;
 }
 
 .footer-logo {
@@ -111,36 +94,77 @@
 
 .footer-description {
     margin-top: 1.5rem;
-    max-width: 520px;
-    line-height: 1.8;
+    line-height: 1.9;
     color: var(--color-text-light);
 }
 
 .footer-disclaimer {
-    margin-top: 1.5rem;
-    color: var(--color-text-light);
+    margin-top: 1rem;
     font-size: 0.95rem;
+    color: var(--color-text-light);
 }
 
-.footer-links h4 {
+.footer-socials h4 {
     font-family: "Poppins", sans-serif;
     margin-bottom: 1.5rem;
 }
 
-.social-links {
+.social-icons {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     gap: 1rem;
 }
 
-.social-links a {
-    color: var(--color-text-light);
-    transition: var(--transition-default);
+.social-icons a {
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--color-surface);
+
+    color: #555;
+
+    transition: all 0.25s ease;
 }
 
-.social-links a:hover {
-    color: var(--color-secondary);
-    transform: translateX(4px);
+.social-icons a:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: var(--shadow-md);
+}
+
+.facebook:hover {
+    background: #1877f2;
+    color: white;
+}
+
+.instagram:hover {
+    background: linear-gradient(135deg,
+            #f58529,
+            #dd2a7b,
+            #8134af,
+            #515bd4);
+
+    color: white;
+}
+
+.tiktok {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.tiktok:hover {
+    background: #000;
+    color: white;
+}
+
+.youtube:hover {
+    background: #ff0000;
+    color: white;
 }
 
 .footer-bottom {
@@ -162,22 +186,34 @@
     font-size: 0.95rem;
 }
 
+.creator-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    color: var(--color-text-light);
+
+    transition: var(--transition-default);
+}
+
+.creator-link:hover {
+    color: var(--color-secondary);
+    transform: translateY(-1px);
+}
+
 @media (max-width: 968px) {
     .footer-container {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .footer-bottom-content {
         flex-direction: column;
         justify-content: center;
-        text-align: center;
-        padding: 1.5rem 0;
-    }
-}
 
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
+        text-align: center;
+
+        padding: 1.5rem 0;
     }
 }
 </style>
