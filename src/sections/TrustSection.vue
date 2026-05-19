@@ -44,6 +44,8 @@ onMounted(() => {
     border-radius: var(--radius-lg);
     background: var(--color-surface);
     border: 1px solid var(--color-border);
+    transition: var(--transition-default);
+    cursor: pointer;
 }
 
 .trust-card h3 {
@@ -55,6 +57,11 @@ onMounted(() => {
     margin-top: 1rem;
     line-height: 1.7;
     color: var(--color-text-light);
+}
+
+.trust-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
 }
 
 @media (max-width: 768px) {

@@ -234,6 +234,13 @@ import MainLayout from "@/layouts/MainLayout.vue";
     padding: 2rem;
     border-radius: var(--radius-lg);
     border: 1px solid var(--color-border);
+    transition: var(--transition-default);
+    cursor: pointer;
+}
+
+.evolution-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
 }
 
 .evolution-card h3 {
@@ -279,6 +286,13 @@ import MainLayout from "@/layouts/MainLayout.vue";
     background: white;
     border: 1px solid var(--color-border);
     text-align: center;
+    transition: var(--transition-default);
+    cursor: pointer;
+}
+
+.stat-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
 }
 
 .stat-card h3 {

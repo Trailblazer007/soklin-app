@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import MainLayout from "@/layouts/MainLayout.vue";
+import { Facebook, Instagram, Youtube } from "lucide-vue-next";
 </script>
 
 <template>
@@ -35,7 +36,7 @@ import MainLayout from "@/layouts/MainLayout.vue";
                     </p>
                 </div>
 
-                <div class="social-grid">
+                <!-- <div class="social-grid">
                     <a href="https://facebook.com/SoKlinNigeria" target="_blank" class="social-card">
                         <h3>Facebook</h3>
                         <p>570K+ followers</p>
@@ -52,6 +53,32 @@ import MainLayout from "@/layouts/MainLayout.vue";
                     </a>
 
                     <a href="https://www.youtube.com/@soklinnigeria" target="_blank" class="social-card">
+                        <h3>YouTube</h3>
+                        <p>Campaign videos & experiences</p>
+                    </a>
+                </div> -->
+
+                <div class="social-grid">
+                    <a href="https://facebook.com/SoKlinNigeria" target="_blank" class="social-card">
+                        <Facebook class="icon" />
+                        <h3>Facebook</h3>
+                        <p>570K+ followers</p>
+                    </a>
+
+                    <a href="https://www.instagram.com/soklin.nigeria" target="_blank" class="social-card">
+                        <Instagram class="icon" />
+                        <h3>Instagram</h3>
+                        <p>Campaign visuals & lifestyle content</p>
+                    </a>
+
+                    <a href="https://www.tiktok.com/@soklinnigeria" target="_blank" class="social-card">
+                        <div class="icon-fallback">🎵</div>
+                        <h3>TikTok</h3>
+                        <p>Challenges & viral moments</p>
+                    </a>
+
+                    <a href="https://www.youtube.com/@soklinnigeria" target="_blank" class="social-card">
+                        <Youtube class="icon" />
                         <h3>YouTube</h3>
                         <p>Campaign videos & experiences</p>
                     </a>
@@ -204,6 +231,19 @@ import MainLayout from "@/layouts/MainLayout.vue";
     text-align: center;
     color: var(--color-text-light);
     font-size: 0.95rem;
+}
+
+/* icon styles */
+.icon {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 1rem;
+    color: var(--color-secondary);
+}
+
+.icon-fallback {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
 }
 
 @media (max-width: 968px) {

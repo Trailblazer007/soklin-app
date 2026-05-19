@@ -132,6 +132,7 @@ const featuredCampaign = computed(() => campaigns[0]);
     border-radius: var(--radius-lg);
     overflow: hidden;
     transition: var(--transition-default);
+    cursor: pointer;
 }
 
 .campaign-card:hover {
