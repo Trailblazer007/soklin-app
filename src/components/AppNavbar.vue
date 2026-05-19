@@ -116,7 +116,7 @@ watch(
 
 <style scoped>
 .logo-image {
-    height: 72px;
+    height: 225px;
     width: auto;
     object-fit: contain;
     display: block;
