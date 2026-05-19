@@ -1,23 +1,22 @@
 <script setup lang="ts">
+import { useCampaignModal } from "@/stores/campaignModal";
+
 defineProps<{
     title: string;
     description: string;
     image: string;
 }>();
+
+const { openModal } = useCampaignModal();
 </script>
 
 <template>
-    <div class="campaign-card">
+    <div class="campaign-card" @click="openModal({ title, description, image })">
         <img :src="image" :alt="title" class="campaign-image" />
 
         <div class="campaign-content">
             <h3>{{ title }}</h3>
-
             <p>{{ description }}</p>
-
-            <button>
-                Explore Campaign
-            </button>
         </div>
     </div>
 </template>
@@ -29,6 +28,7 @@ defineProps<{
     background: white;
     border: 1px solid var(--color-border);
     transition: var(--transition-default);
+    cursor: pointer;
 }
 
 .campaign-card:hover {
