@@ -1,5 +1,7 @@
 import freshConfImg1 from "@/assets/images/events/footballImg.jpg";
 import freshConfImg2 from "@/assets/images/events/fresh-confidence-img-1.jpg";
+import freshConfImg3 from "@/assets/images/events/freshImg3.jpg";
+
 
 export const campaigns = [
   {
@@ -17,5 +19,12 @@ export const campaigns = [
       "A social campaign celebrating freshness, confidence, and self-expression.",
     image:
       freshConfImg2,
+  },
+  {
+    id: 3,
+    title: "Campaign Title Placeholder",
+    description:
+      "Campaign description placeholder. Replace with actual campaign details later.",
+    image: freshConfImg3,
   },
 ];
