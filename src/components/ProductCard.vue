@@ -40,8 +40,27 @@ const { product } = defineProps<{
 
 <style scoped>
 .image-wrapper {
+    position: relative;
     overflow: hidden;
-    background: var(--color-surface);
+
+    background: linear-gradient(90deg,
+            #f3f3f3 25%,
+            #ececec 37%,
+            #f3f3f3 63%);
+
+    background-size: 400% 100%;
+
+    animation: shimmer 1.4s ease infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 100% 0;
+    }
+
+    100% {
+        background-position: -100% 0;
+    }
 }
 
 .product-category {

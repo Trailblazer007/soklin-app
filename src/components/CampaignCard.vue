@@ -12,7 +12,7 @@ const { openModal } = useCampaignModal();
 
 <template>
     <div class="campaign-card" @click="openModal({ title, description, image })">
-        <img :src="image" :alt="title" class="campaign-image" />
+        <img :src="image" :alt="title" class="campaign-image" loading="lazy" />
 
         <div class="campaign-content">
             <h3>{{ title }}</h3>
@@ -40,6 +40,25 @@ const { openModal } = useCampaignModal();
     width: 100%;
     height: 340px;
     object-fit: cover;
+
+    background: linear-gradient(90deg,
+            #f3f3f3 25%,
+            #ececec 37%,
+            #f3f3f3 63%);
+
+    background-size: 400% 100%;
+
+    animation: shimmer 1.4s ease infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 100% 0;
+    }
+
+    100% {
+        background-position: -100% 0;
+    }
 }
 
 .campaign-content {
