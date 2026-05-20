@@ -1,10 +1,31 @@
 <script setup lang="ts">
+
+import { useRouter } from "vue-router";
+
 const categories = [
-    "White Clothes",
-    "Colored Fabrics",
-    "Tough Stains",
-    "Machine Wash",
+    {
+        label: "White Clothes",
+        filter: "white",
+    },
+    {
+        label: "Colored Fabrics",
+        filter: "colored",
+    },
+    {
+        label: "Tough Stains",
+        filter: "stains",
+    },
+    {
+        label: "Machine Wash",
+        filter: "machine",
+    },
 ];
+
+const router = useRouter();
+
+const goToFilter = (filter: string) => {
+    router.push(`/products?filter=${filter}`);
+};
 </script>
 
 <template>
@@ -20,8 +41,8 @@ const categories = [
                 </p>
 
                 <div class="finder-options">
-                    <button v-for="category in categories" :key="category">
-                        {{ category }}
+                    <button v-for="category in categories" :key="category.filter" @click="goToFilter(category.filter)">
+                        {{ category.label }}
                     </button>
                 </div>
             </div>

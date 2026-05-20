@@ -1,20 +1,35 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
-
+import { useRoute } from "vue-router";
 import MainLayout from "@/layouts/MainLayout.vue";
 import ProductCard from "@/components/ProductCard.vue";
 import { products } from "@/data/products";
 
+const route = useRoute();
 const searchQuery = ref("");
 
 const filteredProducts = computed(() => {
-    const query = searchQuery.value.trim().toLowerCase();
+    const query = searchQuery.value
+        .trim()
+        .toLowerCase();
 
-    if (!query) return products;
+    const activeFilter = route.query.filter
+        ?.toString()
+        .toLowerCase();
 
-    return products.filter((product) =>
-        product.name.toLowerCase().includes(query)
-    );
+    return products.filter((product) => {
+        const matchesSearch =
+            !query ||
+            product.name
+                .toLowerCase()
+                .includes(query);
+
+        const matchesFilter =
+            !activeFilter ||
+            product.tags.includes(activeFilter);
+
+        return matchesSearch && matchesFilter;
+    });
 });
 </script>
 

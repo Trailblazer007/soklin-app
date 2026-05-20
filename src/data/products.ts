@@ -16,7 +16,8 @@ export const products = [
     image: soklinOriginal,
     benefits: ["Stain Magnet Technology", "Colour Guard", "30% Concentrated", "Hand & Machine Safe"],
     category: "Powder Detergent",
-    sizes:["15g", "22g", "25g", "30g", "65g", "90g", "190g", "200g", "330g", "500g", "850g", "1kg"]
+    sizes:["15g", "22g", "25g", "30g", "65g", "90g", "190g", "200g", "330g", "500g", "850g", "1kg"],
+    tags:["white", "stains", "everyday"],
   },
   {
     id: 2,
@@ -26,7 +27,8 @@ export const products = [
     image: soklinPink,
     benefits: ["Stain Removal", "Fragrance", "Colour Protection"],
     category: "Powder Detergent",
-    sizes:["1kg"]
+    sizes:["1kg"],
+    tags:["colored", "everyday"],
   },
   {
     id: 3,
@@ -36,7 +38,8 @@ export const products = [
     image: soklinUltraOdourDefence,
     benefits: ["Odour Guard Technology", "2X Freshness", "No Damp Smell", "Indoor Drying Safe"],
     category: "Powder Detergent",
-    sizes:["25g", "50g", "160g", "400g", "800g",]
+    sizes:["25g", "50g", "160g", "400g", "800g",],
+    tags:["stains", "everyday"],
   },
   {
     id: 4,
@@ -46,7 +49,8 @@ export const products = [
     image: soklinMatic,
     benefits: ["Clean 8 Technology", "Machine Optimised", "Low-Foam Formula", "Deep Stain Removal"],
     category: "Machine Detergent",
-    sizes:["1kg", "2kg"]
+    sizes:["1kg", "2kg"],
+    tags:["machine"],
   },
   {
     id: 5,
@@ -56,7 +60,8 @@ export const products = [
     image: soklinSmartLiquidUltimateClean,
     benefits: ["Smart Ion Technology", "2X Cleaner", "Antibacterial", "Soft on Hands"],
     category: "Liquid Detergent",
-    sizes:["33ml"]
+    sizes:["33ml"],
+    tags:["machine", "stains"],
   },
   {
     id: 6,
@@ -66,7 +71,9 @@ export const products = [
     image: soklinSmartLiquidIntensePerfume,
     benefits: ["Long-Lasting Fragrance", "Smart Ion Technology", "Antibacterial", "Hand & Machine Safe"],
     category: "Liquid Detergent",
-    sizes:["33ml"]
+    sizes:["33ml"],
+    tags:["colored", "everyday"],
+
   },
   {
     id: 7,
@@ -76,7 +83,8 @@ export const products = [
     image: soklinLiquidDetergentBottles,
     benefits: ["50% More Concentrated", "2X Fabric Softening", "Anti-Bacterial", "Aromatic Scent"],
     category: "Liquid Detergent",
-    sizes:["800ml", "1l" ]
+    sizes:["800ml", "1l" ],
+    tags:["everyday", "white"],
   },
   {
     id: 8,
@@ -86,6 +94,7 @@ export const products = [
     image: soklin2XProtect,
     benefits: ["2X Germ Protection", "Antiseptic Technology", "Deep Clean", "Brighter Wash"],
     category: "Antibacterial Detergent",
-    sizes:["400g"]
+    sizes:["400g"],
+    tags:["white", "stains"],
   },
 ];

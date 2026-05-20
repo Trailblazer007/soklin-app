@@ -6,4 +6,5 @@ export interface Product {
   benefits: string[];
   category: string;
   sizes: string[];
+  tags: string[];
 }
