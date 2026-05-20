@@ -75,7 +75,6 @@ button:hover {
 .section-subtitle {
   margin-top: 1rem;
   color: var(--color-text-light);
-  max-width: 600px;
   line-height: 1.7;
 }
 

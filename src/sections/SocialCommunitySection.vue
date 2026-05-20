@@ -40,6 +40,15 @@
                         laundry tips, and community engagement.
                     </p>
                 </a>
+
+                <a href="https://youtube.com/@soklinnigeria" target="_blank" class="social-card">
+                    <span>YouTube</span>
+                    <h3>1.21K+ Followers</h3>
+                    <p>
+                        Fresh moments, campaign highlights,
+                        laundry tips, and community engagement.
+                    </p>
+                </a>
             </div>
         </div>
     </section>
@@ -62,7 +71,7 @@
 
 .social-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
     margin-top: 4rem;
 }

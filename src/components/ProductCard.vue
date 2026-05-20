@@ -97,6 +97,7 @@ const { product } = defineProps<{
 .product-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-md);
+    cursor: pointer;
 }
 
 .product-image {
