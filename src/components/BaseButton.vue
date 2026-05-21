@@ -34,8 +34,14 @@ defineProps<{
     padding: 1rem 1.5rem;
     border-radius: var(--radius-md);
     font-weight: 600;
-    transition: var(--transition-default);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
     transform: translateY(0);
+}
+
+.base-button:active {
+    transform: scale(0.98);
 }
 
 .base-button:hover {

@@ -11,8 +11,17 @@ const { product } = defineProps<{
 </script>
 
 <template>
-    <div class="product-card" @click="openModal(product)">
-        <div class="image-wrapper">
+    <div class="product-card" v-motion :initial="{
+        opacity: 0,
+        y: 30,
+    }" :visibleOnce="{
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 500,
+        },
+    }" @click="openModal(product)">
+        <div class=" image-wrapper">
             <img :src="product.image" :alt="product.name" class="product-image" loading="lazy" />
         </div>
 

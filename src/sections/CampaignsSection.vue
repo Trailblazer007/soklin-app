@@ -5,7 +5,16 @@ import { campaigns } from "@/data/campaigns";
 </script>
 
 <template>
-    <section class="section">
+    <section class="section" v-motion :initial="{
+        opacity: 0,
+        y: 60,
+    }" :visibleOnce="{
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 700,
+        },
+    }">
         <div class="container">
             <h2 class="section-title">
                 Campaigns That Bring People Together

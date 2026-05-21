@@ -1,5 +1,14 @@
 <template>
-    <section class="section social-section">
+    <section class="section social-section" v-motion :initial="{
+        opacity: 0,
+        y: 60,
+    }" :visibleOnce="{
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 700,
+        },
+    }">
         <div class="container">
             <div class="social-header">
                 <h2 class="section-title">

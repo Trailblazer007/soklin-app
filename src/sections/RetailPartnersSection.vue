@@ -3,7 +3,16 @@ import { retailers } from "@/data/retailers";
 </script>
 
 <template>
-    <section class="section">
+    <section class="section" v-motion :initial="{
+        opacity: 0,
+        y: 60,
+    }" :visibleOnce="{
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 700,
+        },
+    }">
         <div class="container">
             <div class="retail-header">
                 <h2 class="section-title">

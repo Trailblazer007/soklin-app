@@ -140,7 +140,11 @@ watch(
     background: rgba(255, 255, 255, 0.65);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    transition: all 0.35s ease;
+    /* transition: all 0.35s ease; */
+    transition:
+        background 0.3s ease,
+        backdrop-filter 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .navbar-scrolled {

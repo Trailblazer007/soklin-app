@@ -11,7 +11,16 @@ const { openModal } = useCampaignModal();
 </script>
 
 <template>
-    <div class="campaign-card" @click="openModal({ title, description, image })">
+    <div class="campaign-card" @click="openModal({ title, description, image })" v-motion :initial="{
+        opacity: 0,
+        y: 30,
+    }" :visibleOnce="{
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 500,
+        },
+    }">
         <img :src="image" :alt="title" class="campaign-image" loading="lazy" />
 
         <div class="campaign-content">

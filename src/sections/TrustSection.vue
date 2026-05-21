@@ -10,7 +10,17 @@ onMounted(() => {
 </script>
 
 <template>
-    <section ref="sectionRef" class="section">
+    <section ref="sectionRef" class="section" v-motion :initial="{
+        opacity: 0,
+        y: 60,
+    }" :visibleOnce="{
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 700,
+        },
+    }">
+        <!-- ref="sectionRef" -->
         <div class="container">
             <div class="trust-grid">
                 <div class="trust-card">
