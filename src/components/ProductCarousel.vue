@@ -46,11 +46,11 @@ const onSwiperInit = (swiper: SwiperType) => {
                 </div>
             </div>
 
-            <button ref="prevEl" class="carousel-arrow left">
+            <button ref="prevEl" class="carousel-arrow left" aria-label="Previous product">
                 <ChevronLeft :size="26" />
             </button>
 
-            <button ref="nextEl" class="carousel-arrow right">
+            <button ref="nextEl" class="carousel-arrow right" aria-label="Next product">
                 <ChevronRight :size="26" />
             </button>
 

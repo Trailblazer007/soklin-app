@@ -14,8 +14,8 @@ const { closeModal } = campaignModalStore;
 <template>
     <div v-if="isOpen" class="modal-overlay" @click="closeModal">
         <div class="modal-content" @click.stop>
-            <button class="close-btn" @click="closeModal">
-                ×
+            <button class="close-btn" @click="closeModal" aria-label="Close campaign details">
+                x
             </button>
 
             <img :src="selectedCampaign?.image" :alt="selectedCampaign?.title" class="modal-image" />

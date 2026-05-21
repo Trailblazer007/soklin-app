@@ -16,7 +16,7 @@ import MainLayout from "@/layouts/MainLayout.vue";
 
                 <p class="hero-description">
                     For decades, SoKlin has remained part of everyday life
-                    in Nigerian homes — delivering brighter washes,
+                    in Nigerian homes - delivering brighter washes,
                     long-lasting freshness, and detergent solutions built
                     for modern lifestyles.
                 </p>

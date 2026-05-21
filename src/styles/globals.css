@@ -36,6 +36,14 @@ button {
   cursor: pointer;
 }
 
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 2px solid var(--color-secondary);
+    outline-offset: 3px;
+    border-radius: 6px;
+}
+
 button,
 a,
 .product-card,
@@ -94,4 +102,12 @@ button:hover {
   .section-subtitle {
     font-size: 0.98rem;
   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
 }

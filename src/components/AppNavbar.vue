@@ -82,7 +82,10 @@ watch(
                 <RouterLink to="/contact" active-class="active-link">Contact</RouterLink>
             </nav>
 
-            <button class="mobile-menu-button" @click.stop="isMobileMenuOpen = !isMobileMenuOpen">
+            <button class="mobile-menu-button" :aria-label="isMobileMenuOpen
+                    ? 'Close navigation menu'
+                    : 'Open navigation menu'
+                " @click.stop="isMobileMenuOpen = !isMobileMenuOpen">
                 <Menu v-if="!isMobileMenuOpen" :size="28" />
                 <X v-else :size="28" />
             </button>
