@@ -8,7 +8,7 @@ This project is a frontend portfolio build exploring how a household brand like 
 
 ## Live Demo
 
-(Add your deployment link here once ready)
+https://soklin-app.vercel.app/
 
 ---
 
