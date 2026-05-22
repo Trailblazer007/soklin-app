@@ -83,7 +83,7 @@ It is not an official SoKlin product or affiliated with the brand.
 
 ## Screenshots
 
-![alt text](soklin-full.png)
+![alt text](image-4.png)
 ![alt text](image.png)
 ![alt text](image-1.png)
 ![alt text](image-3.png)
