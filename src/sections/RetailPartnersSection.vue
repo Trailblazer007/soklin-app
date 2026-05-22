@@ -38,12 +38,6 @@ import { retailers } from "@/data/retailers";
 </template>
 
 <style scoped>
-.section-subtitle {
-    white-space: nowrap;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .retail-header {
     text-align: center;
 }

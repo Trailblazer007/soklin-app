@@ -41,8 +41,12 @@ import { campaigns } from "@/data/campaigns";
 </template>
 
 <style scoped>
+.section-title {
+    text-align: center;
+}
+
 .section-subtitle {
-    white-space: nowrap;
+    text-align: center;
 }
 
 .campaigns-grid {

@@ -87,11 +87,6 @@ const filteredProducts = computed(() => {
     margin-bottom: 2rem;
 }
 
-.section-subtitle {
-    margin-left: auto;
-    margin-right: auto;
-}
-
 /* SEARCH */
 .search-wrapper {
     margin-top: 2.5rem;

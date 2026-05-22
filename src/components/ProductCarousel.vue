@@ -74,9 +74,13 @@ const onSwiperInit = (swiper: SwiperType) => {
 
 .carousel-header {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 2rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.carousel-header .section-subtitle {
+    max-width: 600px;
+    margin: 1rem auto 0;
 }
 
 .carousel-controls {
