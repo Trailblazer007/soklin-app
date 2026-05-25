@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import {
-    Facebook,
-    Instagram,
-    Youtube,
-    Github,
-} from "lucide-vue-next";
+import BaselineTiktokIcon from '@iconify-vue/ic/baseline-tiktok';
+import BaselineFacebookIcon from '@iconify-vue/ic/baseline-facebook';
+import InstagramIcon from '@iconify-vue/mdi/instagram';
+import YoutubeIcon from '@iconify-vue/mdi/youtube';
+import GithubIcon from '@iconify-vue/mdi/github';
+
 </script>
 
 <template>
@@ -29,21 +29,21 @@ import {
 
                 <div class="social-icons">
                     <a href="https://facebook.com/SoKlinNigeria" target="_blank" aria-label="Facebook" class="facebook">
-                        <Facebook :size="22" />
+                        <BaselineFacebookIcon height="24" width="22" />
                     </a>
 
                     <a href="https://www.instagram.com/soklin.nigeria" target="_blank" aria-label="Instagram"
                         class="instagram">
-                        <Instagram :size="22" />
+                        <InstagramIcon height="24" width="22" />
                     </a>
 
                     <a href="https://www.tiktok.com/@soklinnigeria" target="_blank" aria-label="TikTok" class="tiktok">
-                        ♪
+                        <BaselineTiktokIcon height="24" width="22" />
                     </a>
 
                     <a href="https://www.youtube.com/@soklinnigeria" target="_blank" aria-label="YouTube"
                         class="youtube">
-                        <Youtube :size="22" />
+                        <YoutubeIcon height="22" width="22" />
                     </a>
                 </div>
             </div>
@@ -56,8 +56,8 @@ import {
                 </p>
 
                 <a href="https://github.com/trailblazer007" target="_blank" class="creator-link">
-                    <Github :size="16" />
-
+                    <!-- <GithubIcon :size="10" /> -->
+                    <GithubIcon height="16" width="16" />
                     <span>
                         Built by Oluwaseun Fatoye
                     </span>
