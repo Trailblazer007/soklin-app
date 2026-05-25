@@ -106,9 +106,9 @@ Built by **Oluwaseun Fatoye**
 
 Frontend Developer focused on Vue.js, React, and modern UI systems.
 
-- GitHub: (add your GitHub link here)
-- Portfolio: (add your portfolio link here)
-- Email: (optional)
+- GitHub: https://github.com/Trailblazer007
+- Portfolio: https://portfolio-oluwaseun-fatoye.vercel.app/
+- Email: fatoyeoluwaseun@gmail.com
 
 ---
 
